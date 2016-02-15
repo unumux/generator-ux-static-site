@@ -1,12 +1,12 @@
 {
   "name": "@unumux/generator-ux-static-site",
-  "version": "1.0.0",
   "description": "",
   "main": "generators/app/index.js",
   "scripts": {
     "start": "gulp",
     "test": "gulp test",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish --access public && semantic-release post"
   },
   "files": [
     "generators/app",
@@ -37,7 +37,8 @@
     "gulp-mocha": "^2.2.0",
     "isparta": "^4.0.0",
     "mock-fs": "^3.7.0",
-    "validate-commit-msg": "^2.0.0"
+    "validate-commit-msg": "^2.0.0",
+    "semantic-release": "^4.3.5"
   },
   "config": {
     "commitizen": {
@@ -62,5 +63,9 @@
       "warnOnFail": false,
       "maxSubjectLength": 100
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unumux/generator-ux-static-site.git"
   }
 }
